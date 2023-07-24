@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+
+namespace AcJosue_EvaluacionFinal
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+            
+
+
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+                
+
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string[] series = {"Categoria 1", "Categoria 2", "Categoria 3", "Categoria 4", "Categoria 5"};
+            int[] puntos = { 20, 35, 12, 45, 28 };
+
+            chart1.Titles.Add("AcJosue_ExamenFinal");
+
+            for (int i = 0; i < series.Length; i++)
+            {
+                Series serie = chart1.Series.Add(series[i]);
+                serie.Label = puntos[i].ToString();
+                serie.Points.Add(puntos[i]);
+
+            }
+
+
+        
+        
+        
+        }
+
+
+
+    }
+    }
